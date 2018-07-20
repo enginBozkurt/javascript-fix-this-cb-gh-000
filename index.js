@@ -31,9 +31,11 @@ function makeCake() {
 }
 
 function makePie() {
-  pie.decorate = cake.decorate.bind(pie);
-  const pieDiv = document.getElementById("pie");
-  var updatePieStatus = updateStatus.call(pieDiv);
+  var updatePieStatus;
+- updatePieStatus = updateStatus.bind(this)
+
+
+  var updatePieStatus = 
   mix.call(pie, updatePieStatus);
 }
 
@@ -75,15 +77,15 @@ function makeDessert() {
   //add code here to decide which make... function to call
   //based on which link was clicked
   switch(this) {
-    
+
       case document.getElementsByClassName("js-make")[0]:
         makeCake.call(document.getElementById("cake"))
         break;
-        
+
       case document.getElementsByClassName("js-make")[1]:
         makePie.call(document.getElementById("pie"))
         break;
-        
+
       default:
         null
     }
