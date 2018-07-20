@@ -25,14 +25,14 @@ var pie = {
 };
 
 function makeCake() {
-  const cakeDiv = document.getElementById("cake")
+  const cakeDiv = document.getElementById("cake");
   var updateCakeStatus = updateStatus.bind(cakeDiv);
   mix.call(cake, updateCakeStatus);
 }
 
 function makePie() {
   pie.decorate = cake.decorate.bind(pie);
-  const pieDiv = document.querySelector("#pie");
+  const pieDiv = document.getElementById("pie");
   var updatePieStatus = updateStatus.bind(pieDiv);
   mix.call(pie, updatePieStatus);
 }
