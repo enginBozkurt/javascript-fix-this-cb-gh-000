@@ -74,11 +74,16 @@ function cool(updateFunction) {
 function makeDessert() {
   //add code here to decide which make... function to call
   //based on which link was clicked
-  if (this.innerText === "Make Cake") {
-    makeCake();
-  } else if (this.innerText === "Make Pie") {
-    makePie();
-  }
+  switch(this) {
+      case document.getElementsByClassName("js-make")[0]:
+        makeCake.call(document.getElementById("cake"))
+        break;
+      case document.getElementsByClassName("js-make")[1]:
+        makePie.call(document.getElementById("pie"))
+        break;
+      default:
+        null
+    }
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
