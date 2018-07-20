@@ -11,7 +11,7 @@ var cake = {
 
     setTimeout(() => {
       updateFunction(serve.apply(this, ["Happy Eating!", this.customer]));
-    }, 2000);    
+    }, 2000);
   }
 }
 
@@ -88,4 +88,3 @@ document.addEventListener("DOMContentLoaded", function(event) {
     cookLinks[i].addEventListener("click", makeDessert);
   }
 });
-
